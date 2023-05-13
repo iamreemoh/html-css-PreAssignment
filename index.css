@@ -122,8 +122,12 @@ ul{
 #first-row{
     width:20%;
 }
-#location, #phone, #fax, #figs{
+#location, #phone, #fax{
     margin:7px;
+}
+#figs{
+    margin:0px;
+    padding:0px;
 }
 .main-container .footer-section .coloumn .row #figs a{
     display: inline-block;
@@ -161,7 +165,7 @@ ul{
     }
     .coloumn{   /* for footer section:{ home, reg, log ...} */
         width:100%;
-        margin-bottom:30px;
+        margin-bottom:20px;
         
         justify-content:space-evenly;
     }
