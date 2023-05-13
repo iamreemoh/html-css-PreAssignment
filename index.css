@@ -1,0 +1,205 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color:white;
+}
+a:hover{
+    color:mediumaquamarine;
+}
+.navigation-buttons{
+    display: flex;
+    list-style:none;
+    justify-content: space-evenly;
+
+    padding:15px 0px;
+    border:none;
+    background-color:rgb(49, 49, 100);
+
+    font-family: sans-serif;
+    font-size: 12px;
+}
+/* Above this navigation bar  */
+h1{
+    text-align: center;
+    font-family: sans-serif;
+    font-size: large ;
+    margin: 10px 0px;
+}
+img{
+    border:2px solid rgb(49, 49, 100);
+    width: 350px;
+    height: 200px;
+    object-fit: contain;
+}
+.cell{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.caption-space{
+    display:block;
+    height:115px;
+}
+.caption{
+    background-color:rgb(49, 49, 100);
+    height: 100px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    text-align:center;
+}
+#member-name{
+    font-size:medium;
+    font-weight:bold;
+}
+
+/* to remove the space between image border 
+and caption border, defining the image element and
+caption element to block type (so that any inline between
+the line spacing present will be removed. Also setting the
+margins to zero*/
+
+img, figcaption{
+    display:block;
+    margin: 0px;
+}
+/* Below this is footer  */
+ul{
+    list-style: none;
+}
+.footer-section{
+    display:flex;
+    flex-wrap: wrap;
+
+    color:white;
+    background-color:rgba(19, 19, 226, 0.8);
+    height:280x;
+
+    align-items:center;
+    font-family:sans-serif;
+}
+#home, #reg, #login, #logout{
+    border-left: 2px;
+    border-color:white;
+}
+.coloumn{
+    width:33%;
+    text-align:center;
+}
+#about{
+    font-size:large;
+    font-weight:bold;
+    margin:10px;
+}
+#para{
+    text-align: left;
+}
+#first-coloumn{
+    display: flex;
+    flex-wrap:wrap;
+    margin: 10px 0px 0px 0px;
+}
+#first-row{
+    width:20%;
+}
+#location, #phone, #fax, #figs{
+    margin:7px;
+}
+.main-container .footer-section .coloumn .row #figs a{
+    display: inline-block;
+    margin:5px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+}
+.main-container .footer-section .coloumn .row #figs a:hover{
+    display: inline-block;
+    margin:5px;
+    color: rgba(19, 19, 226, 0.8);
+    background-color: white;
+    border: 1px solid #ededed;
+    border-radius: 50%;
+}
+/* Responsive */
+@media(max-width: 1054px){
+    img{
+        width: 250px;
+        height: 143px;
+    }
+    .caption-space{
+        height:83px;
+    }
+    .caption{
+        height:71px;
+    }
+    #member-name, #member-role, #member-location{
+        font-size:14px;
+    }
+}
+@media(max-width: 880px){ 
+    .navigation-buttons{
+        font-size:10px;
+    }
+    .coloumn{   /* for footer section:{ home, reg, log ...} */
+        width:100%;
+        margin-bottom:30px;
+        
+        justify-content:space-evenly;
+    }
+    img{
+        width: 200px;
+        height: 114px;
+    }
+    .caption-space{
+        height:66px;
+    }
+    .caption{
+        height: 57px;
+    }
+    #member-name, #member-role, #member-location{
+        font-size:small;
+    }
+}
+@media(max-width:604px){
+    .navigation-buttons, #first-coloumn{
+        font-size:8px;
+    }
+    .coloumn{
+        margin-bottom:20px;
+    }
+    img{
+        width: 114px;
+        height: 65px;
+    }
+    .caption-space{
+        height:38px;
+    }
+    .caption{
+        height:26px;
+    }
+    #member-name, #member-role, #member-location{
+        font-size:5px;
+    }
+    #location, #phone, #fax{
+        font-size:10px;
+    }
+    #about{
+        font-size:12px;
+    }
+    #para{
+        font-size:7px;
+    }
+}
+@media(max-width:325px){
+    #first-coloumn{
+        display: inline-block;
+        margin-bottom:30px;
+        
+        text-align: center;
+    }
+}
