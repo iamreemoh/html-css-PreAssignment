@@ -11,12 +11,19 @@
 <body>
     <div class="main-container">
         <header class="navigation-bar" role="banner">
-            <div class="navigation-buttons">
-                <li> <a href="#">Home</a></li>
-                <li> <a href="#">Register</a></li>
-                <li> <a href="#">Login</a></li>
-                <li> <a href="#">Logout</a></li>
-                <li> <a href="#">Contact</a></li>
+            <div class="navigation-buttons" id="Navig-text">
+                <li class="navigation-list" id="N1"> <a href="#">Home</a></li>
+                <li class="navigation-list" id="N2"> <a href="#">Register</a></li>
+                <li class="navigation-list" id="N3"> <a href="#">Login</a></li>
+                <li class="navigation-list" id="N4"> <a href="#">Logout</a></li>
+                <li class="navigation-list" id="N5"> <a href="#">Contact</a></li>
+            </div>
+            <div class="navigation-buttons" id="icons">
+                <li class="navigation-list" id="I1" title="Home"> <a href="#"><ion-icon name="home"></ion-icon></a></li>
+                <li class="navigation-list" id="I2" title="Register"> <a href="#"><ion-icon name="person-add"></ion-icon></a></li>
+                <li class="navigation-list" id="I3" title="Log in"> <a href="#"><ion-icon name="log-in"></ion-icon></a></li>
+                <li class="navigation-list" id="I4" title="Log out"> <a href="#"><ion-icon name="log-out"></ion-icon></a></li>
+                <li class="navigation-list" id="I5" title="Contact"> <a href="#"><ion-icon name="contract"></ion-icon></a></li>
             </div>
         </header>
         <div class="content">
@@ -26,74 +33,62 @@
                 <div class="row">
                     <div class="cell">
                         <figure>
-                            <img src="images/person-1.jpg" alt="member pic">
-                            <div class="caption-space">
-                                <div class="caption">
-                                    <figcaption class="figcaption">
-                                            <p id="member-name">--name-here--</p>
-                                            <p id="member-role">--role-here--</p>   
-                                            <p id="member-location">--location-here--</p>
-                                    </figcaption>
+                            <div class="image-container">
+                                <img src="images/person-1.jpg" alt="member pic">
+                                <div class="caption-on-border">
+                                    <li id="member-name">Leonard Nixon</li>
+                                    <li id="member-role">Full-stack web developer</li>   
+                                    <li id="member-location">Bangladesh</li>    
                                 </div>
                             </div>
                         </figure>
                         <figure>
-                            <img src="images/person-2.jpg" alt="member pic">
-                            <div class="caption-space">
-                                <div class="caption">
-                                    <figcaption class="figcaption">
-                                            <p id="member-name">--name-here--</p>
-                                            <p id="member-role">--role-here--</p>   
-                                            <p id="member-location">--location-here--</p>
-                                    </figcaption>
+                            <div class="image-container">
+                                <img src="images/person-2.jpg" alt="member pic">
+                                <div class="caption-on-border">
+                                    <li id="member-name">Lucas Berg</li>
+                                    <li id="member-role">Team lead</li>   
+                                    <li id="member-location">Austria</li>
                                 </div>
                             </div>
                         </figure>
                         <figure>
-                            <img src="images/person-3.jpg" alt="member pic">
-                            <div class="caption-space">
-                                <div class="caption">
-                                    <figcaption class="figcaption">
-                                            <p id="member-name">--name-here--</p>
-                                            <p id="member-role">--role-here--</p>   
-                                            <p id="member-location">--location-here--</p>
-                                    </figcaption>
+                            <div class="image-container">
+                                <img src="images/person-3.jpg" alt="member pic">
+                                <div class="caption-on-border">
+                                    <li id="member-name">Dario Barrera</li>
+                                    <li id="member-role">Data analyst</li>   
+                                    <li id="member-location">Spain</li>
                                 </div>
                             </div>
                         </figure>
                         <figure>
-                            <img src="images/person-4.jpg" alt="member pic">
-                            <div class="caption-space">
-                                <div class="caption">
-                                    <figcaption class="figcaption">
-                                            <p id="member-name">--name-here--</p>
-                                            <p id="member-role">--role-here--</p>   
-                                            <p id="member-location">--location-here--</p>
-                                    </figcaption>
+                            <div class="image-container">
+                                <img src="images/person-4.jpg" alt="member pic">
+                                <div class="caption-on-border">
+                                    <li id="member-name">Enrique Webster</li>
+                                    <li id="member-role">Frontend Developer</li>   
+                                    <li id="member-location">Pakistan</li>
                                 </div>
                             </div>
                         </figure>
                         <figure>
-                            <img src="images/person-5.jpg" alt="member pic">
-                            <div class="caption-space">
-                                <div class="caption">
-                                    <figcaption class="figcaption">
-                                            <p id="member-name">--name-here--</p>
-                                            <p id="member-role">--role-here--</p>   
-                                            <p id="member-location">--location-here--</p>
-                                    </figcaption>
+                            <div class="image-container">
+                                <img src="images/person-5.jpg" alt="member pic">
+                                <div class="caption-on-border">
+                                    <li id="member-name">Shania Dennis</li>
+                                    <li id="member-role">Project manager</li>   
+                                    <li id="member-location">Germany</li>
                                 </div>
                             </div>
                         </figure>
                         <figure>
-                            <img src="images/person-6.jpg" alt="member pic">
-                            <div class="caption-space">
-                                <div class="caption">
-                                    <figcaption class="figcaption">
-                                            <p id="member-name">--name-here--</p>
-                                            <p id="member-role">--role-here--</p>   
-                                            <p id="member-location">--location-here--</p>
-                                    </figcaption>
+                            <div class="image-container">
+                                <img src="images/person-6.jpg" alt="member pic">
+                                <div class="caption-on-border">
+                                    <li id="member-name">Alex Maynard</li>
+                                    <li id="member-role">Backend Developer</li>   
+                                    <li id="member-location">Finland</li>
                                 </div>
                             </div>
                         </figure>

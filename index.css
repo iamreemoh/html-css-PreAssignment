@@ -1,7 +1,6 @@
 *{
     margin:0px;
     padding:0px;
-    box-sizing: border-box;
 }
 .main-container{
     min-height:100%;
@@ -25,17 +24,28 @@ a:hover{
     color:mediumaquamarine;
 }
 .navigation-buttons{
-    display: flex;
+    /* display:flex; */
     list-style:none;
-    justify-content: space-evenly;
+    flex-wrap:wrap;
 
     padding:15px 0px;
     border:none;
-    background-color:rgb(49, 49, 100);
+    background-color:rgb(47, 12, 58);
 
     font-family: sans-serif;
     font-size: 12px;
 }
+.navigation-list{
+    width:20%;
+    text-align: center;
+}
+#Navig-text{
+    display:flex;
+}
+#icons{
+    display:none;
+}
+
 /* Above this navigation bar  */
 h1{
     text-align: center;
@@ -43,45 +53,63 @@ h1{
     font-size: large ;
     margin: 10px 0px;
 }
-img{
-    border:2px solid rgb(49, 49, 100);
-    width: 350px;
-    height: 200px;
+.image-container {
+  width: 350px;
+  height: 300px;
+  --container-height:300px;
+  position:relative;
+}
+
+img {
+  border: 2px solid rgb(47, 12, 58);
+  border-radius: 7px;
+  width: 90%;
+  height: 65%;
+  object-fit: contain;
+  border-bottom: calc(0.35 * var(--container-height)) solid rgb(49, 49, 100);
+  transition: transform 0.5s ease-in-out,border-bottom-width 0.5s ease-in-out;
+}
+img:hover{
     object-fit: contain;
+    transform: scale(1.11);
+    border-bottom: calc(0.27 * var(--container-height)) solid rgb(49, 49, 100);
+}
+.caption-on-border{
+    position:absolute;
+    bottom:9%;
+    left:40%;
+    transform: translateX(-40%);
+    border-color:rgb(47, 12, 58);
+    color:rgb(212, 134, 248);
+    text-align:center;
+    font-family: sans-serif;
+}
+li{
+    list-style:none;
+    text-transform: capitalize;
+}
+#member-name{
+    display:none;
+}
+#member-role, #member-location{
+    display:block;
+    transition: transform 0.5s ease-in-out;
+}
+.image-container:hover #member-name{
+    display:block;
+    transform: scale(1.2);
+    color:#FFA500;
+}
+.image-container:hover #member-role, .image-container:hover #member-location{
+    display:none;
+}
+figure{
+    margin-top:20px;
 }
 .cell{
     display:flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-}
-.caption-space{
-    display:block;
-    height:115px;
-}
-.caption{
-    background-color:rgb(49, 49, 100);
-    height: 100px;
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: sans-serif;
-    text-align:center;
-}
-#member-name{
-    font-size:medium;
-    font-weight:bold;
-}
-
-/* to remove the space between image border 
-and caption border, defining the image element and
-caption element to block type (so that any inline between
-the line spacing present will be removed. Also setting the
-margins to zero*/
-
-img, figcaption{
-    display:block;
-    margin: 0px;
 }
 /* Below this is footer  */
 ul{
@@ -144,65 +172,78 @@ ul{
     border-radius: 50%;
 }
 /* Responsive */
-@media(max-width: 1054px){
-    img{
-        width: 250px;
-        height: 143px;
-    }
-    .caption-space{
-        height:83px;
-    }
-    .caption{
-        height:71px;
-    }
-    #member-name, #member-role, #member-location{
-        font-size:14px;
-    }
-}
-@media(max-width: 880px){ 
-    .navigation-buttons{
-        font-size:10px;
-    }
-    .coloumn{   /* for footer section:{ home, reg, log ...} */
-        width:100%;
-        margin-bottom:20px;
-        
-        justify-content:space-evenly;
+@media(max-width: 1050px){
+
+    h1{font-size:medium;}
+
+    .image-container{
+        width:290px;
+        height:250px;
+        --container-height:250px;
     }
     img{
-        width: 200px;
-        height: 114px;
+        width:90%;
+        height:70%;
+        border-bottom:calc(0.30 *var(--container-height)) solid rgb(49,49,100);
     }
-    .caption-space{
-        height:66px;
+    img:hover{
+        border-bottom: calc(0.23 *var(--container-height)) solid rgb(49,49,100);
     }
-    .caption{
-        height: 57px;
+
+    .caption-on-border{
+
+        font-size: 14px;
+
+        left:35%;
+        transform: translateX(-30%);
     }
-    #member-name, #member-role, #member-location{
-        font-size:small;
-    }
+    figure{margin-top: 40px;}
 }
-@media(max-width:604px){
+@media(max-width: 870px){
+
+    h1{font-size:medium;}
+
+    .image-container{
+        width:240px;
+        height:207px;
+        --container-height:207px;
+    }
+    img:hover{
+        border-bottom: calc(0.20 *var(--container-height)) solid rgb(49,49,100);
+    }
+    .caption-on-border{
+
+        font-size: 14px;
+
+        bottom:5%;
+        left:30%;
+        transform: translateX(-20%);
+    }
+
+    figure{margin-top: 50px;}
+}
+@media(max-width: 720px){
+
+    h1{font-size:medium;}
+
+    .image-container{
+        width:200px;
+        height:172px;
+        --container-height:172px;
+    }
+
+    .caption-on-border{
+        font-size: 12px;
+    }
+    figure{margin-top: 60px;}
+
     .navigation-buttons, #first-coloumn{
         font-size:8px;
     }
     .coloumn{
         margin-bottom:20px;
     }
-    img{
-        width: 114px;
-        height: 65px;
-    }
-    .caption-space{
-        height:38px;
-    }
-    .caption{
-        height:26px;
-    }
-    #member-name, #member-role, #member-location{
-        font-size:5px;
-    }
+
     #location, #phone, #fax{
         font-size:10px;
     }
@@ -213,11 +254,48 @@ ul{
         font-size:7px;
     }
 }
-@media(max-width:325px){
-    #first-coloumn{
+@media(max-width:499px){
+
+    #Navig-text{
+        display:none;
+    }
+    #icons{
+        display:flex;
+    }
+    
+    h1{font-size:14px;}
+
+    .image-container{
+        width:180px;
+        height:155px;
+        --container-height:155px;
+    }
+
+    #member-role{
+        display:flex;
+        font-size: 12px;
+        bottom: 5%;
+        left: 0%;
+        transform: translateX(-10%);
+        line-height:.8;
+    }
+    #member-location{
+        display:flex;
+        bottom:-5%;
+        left:40%;
+        font-size:12px;
+        transform: translateX(12%);
+    }
+    figure{margin-top: 60px;}
+
+    .navigation-buttons, #first-coloumn{
+        font-size:8px;
+    }
+    .coloumn{   /* for footer section:{ home, reg, log ...} */
+        width:100%;
+        margin-bottom:20px;
         display: inline-block;
-        margin-bottom:30px;
         
-        text-align: center;
+        justify-content:space-evenly;
     }
 }
