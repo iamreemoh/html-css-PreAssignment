@@ -261,6 +261,7 @@ ul{
     }
     #icons{
         display:flex;
+        font-size:18px;
     }
     
     h1{font-size:14px;}
@@ -273,17 +274,17 @@ ul{
 
     #member-role{
         display:flex;
-        font-size: 12px;
+        font-size: 10px;
         bottom: 5%;
         left: 0%;
         transform: translateX(-10%);
-        line-height:.8;
+        line-height:1.1;
     }
     #member-location{
         display:flex;
         bottom:-5%;
         left:40%;
-        font-size:12px;
+        font-size:10px;
         transform: translateX(12%);
     }
     figure{margin-top: 60px;}
