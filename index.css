@@ -9,6 +9,14 @@
 .content{
     padding-bottom:210px;
 }
+.main-container{
+    position:relative;
+}
+.navigation-bar{
+    position:sticky;
+    top:0;
+    z-index: +1; 
+}
 .footer-section{
     position:relative;
     bottom:0;
@@ -51,7 +59,13 @@ h1{
     text-align: center;
     font-family: sans-serif;
     font-size: large ;
-    margin: 10px 0px;
+    margin: 10px 80px;
+    padding:10px;
+    background-color: mediumaquamarine;
+    border-radius: 20px;
+}
+.content{
+    margin:0px 0px;
 }
 .image-container {
   width: 350px;
@@ -270,15 +284,19 @@ ul{
         width:180px;
         height:155px;
         --container-height:155px;
+        position:relative;
     }
 
     #member-role{
-        display:flex;
+        display:inline-block;
         font-size: 10px;
-        bottom: 5%;
-        left: 0%;
-        transform: translateX(-10%);
+        position:absolute;
+        left: -75%;
+        bottom:-100%;
+        right:-100%;
+        top:-100%;
         line-height:1.1;
+        text-align: center;
     }
     #member-location{
         display:flex;
